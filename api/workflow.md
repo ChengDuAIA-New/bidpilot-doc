@@ -6,11 +6,13 @@ POST /api/workflow/create HTTP/1.1
 Content-Type: application/json;
 ````
 ````ts
+import { ApiResponse } from '@/types/api'
+
 Request<{
     // 项目id
     projectId: number
 }>
-Response<
+ApiResponse<
     number
 >
 ````
@@ -21,9 +23,11 @@ POST /api/workflow/find HTTP/1.1
 Content-Type: application/json;
 ````
 ````ts
+import { ApiResponse } from '@/types/api'
+
 Request<{
     // 项目id
     projectId: number
 }>
-Response<number[]>
+ApiResponse<number[]>
 ````

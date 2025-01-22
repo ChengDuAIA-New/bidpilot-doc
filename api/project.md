@@ -6,6 +6,8 @@ POST /api/project/create HTTP/1.1
 Content-Type: application/json;
 ````
 ````ts
+import { ApiResponse } from '@/types/api'
+
 Request<{
     // 项目名称
     projectName: string
@@ -20,7 +22,7 @@ Request<{
     // 项目描述
     projectDesc: string | null
 }>
-Response<
+ApiResponse<
     {
         // 项目id
         projectId: number
@@ -46,11 +48,13 @@ POST /api/project/find HTTP/1.1
 Content-Type: application/json;
 ````
 ````ts
+import { ApiResponse } from '@/types/api'
+
 Request<{
     // 项目Id
     projectId: number | null
 }>
-Response<[
+ApiResponse<[
     {
         // 项目id
         projectId: number
