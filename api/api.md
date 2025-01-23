@@ -30,6 +30,6 @@ export interface PageResponse<T> {
 ```
 例如:
 ```http request
-POST /api/users/page?page=0&size=10&sort=createTime,desc&sort=username,asc
+POST /api/users/page?page=1&size=10&sort=createTime,desc&sort=username,asc
 Content-Type: application/json
 ```

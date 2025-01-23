@@ -88,3 +88,14 @@ ApiResponse<[
     }
 ]>
 ````
+
+### 文件下载
+
+````http request
+// 上传文件
+GET /api/file/download/{fileId} HTTP/1.1
+````
+````ts
+// 响应体
+Response<Blob>  // 文件二进制流
+````
