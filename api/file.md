@@ -50,6 +50,8 @@ ApiResponse<{
     fileType: number
     // 文件大小
     fileSize: number
+    // 文件路径
+    filePath: string
 }>
 ````
 ### 文件查询

@@ -16,7 +16,7 @@ Request<{
 ApiResponse<{
     workflowId : number
     segments: Array<{
-        segmentsId: number
+        segmentId: number
         name: string
         parentId: number
     }>
@@ -32,12 +32,12 @@ Content-Type: application/json;
 import { ApiResponse } from '@/types/api'
 
 Request<{
-    segmentsId: number
+    segmentId: number
     // 下一步环节所需参数
     // ...
 }>
 ApiResponse<{
-    segmentsId: number
+    segmentId: number
     name: string
     parentId: number
 }>

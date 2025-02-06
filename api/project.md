@@ -10,34 +10,34 @@ import { ApiResponse } from '@/types/api'
 
 Request<{
     // 项目名称
-    projectName: string
+    name: string
     // 项目编号
-    projectNumber: string
+    number: string
     // 项目类型
-    projectType: string
+    type: string
     // 招标单位
     orgName: string
     // 发布时间
     releaseDate: Date
     // 项目描述
-    projectDesc: string | null
+    description: string | null
 }>
 ApiResponse<
     {
         // 项目id
-        projectId: number
+        id: number
         // 项目名称
-        projectName: string
+        name: string
         // 项目编号
-        projectNumber: string
+        number: string
         // 项目类型
-        projectType: string
+        type: string
         // 招标单位
         orgName: string
         // 发布时间
         releaseDate: Date
         // 项目描述
-        projectDesc: string | null
+        description: string | null
     }
 >
 ````
@@ -52,24 +52,29 @@ import { ApiResponse } from '@/types/api'
 
 Request<{
     // 项目Id
-    projectId: number | null
+    id: number | null
+    // 项目名称
+    name: string | null
+    // 项目编号
+    number: string | null
+    page?: number
+    size?: number
+    sort?: string
 }>
-ApiResponse<[
-    {
-        // 项目id
-        projectId: number
-        // 项目名称
-        projectName: string
-        // 项目编号
-        projectNumber: string
-        // 项目类型
-        projectType: string
-        // 招标单位
-        orgName: string
-        // 发布时间
-        releaseDate: Date
-        // 项目描述
-        projectDesc: string | null
-    }
-]>
+ApiResponse<PageResponse<{
+    // 项目id
+    id: number
+    // 项目名称
+    name: string
+    // 项目编号
+    number: string
+    // 项目类型
+    type: string
+    // 招标单位
+    orgName: string
+    // 发布时间
+    releaseDate: Date
+    // 项目描述
+    description: string | null
+}>>
 ````

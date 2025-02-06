@@ -29,5 +29,11 @@ Request<{
     // 项目id
     projectId: number
 }>
-ApiResponse<number[]>
+ApiResponse<{
+    workflowId: number
+    projectId: number
+    status: string
+    createTime: string
+    currentSegmentId: number
+}[]>
 ````

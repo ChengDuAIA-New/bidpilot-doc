@@ -19,10 +19,10 @@ export interface PageRequest {
 }
 
 export interface PageResponse<T> {
-    totalElements: number      // 总记录数
-    totalPages: number      // 总页数
+    totalElement: number      // 总记录数
+    totalPage: number      // 总页数
     content: T[]         // 当前页数据
-    number: number   // 页码
+    page: number   // 页码
     size: number  // 每页大小
     first: boolean     // 是否是第一页
     last: boolean      // 是否是最后一页
